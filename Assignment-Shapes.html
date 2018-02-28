@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+    /* uncomment to see borders around your table cells. */
+    td {
+        border: 1px solid black;
+    }
+</style>
+<body>
+
+<h1>Assignment - Shapes</h1>
+<p>
+    This assignment will have you working with the DOM, Strings, and Loops. The goal is to programmatically make 2
+    different tables and fill them with certain symbols. As you draw the shapes put a * inside of each cell to
+    indicate you filled with something. Each td cell should only have one * in it.
+</p>
+<p>
+    The square table will be 10 cells wide and will be 10 cells tall. Every cell should be filled.<br />
+    See the output image for an example.<br />
+    Insert your table into the element with #square selector.
+</p>
+<p>
+    The triangle table will start as 1 cell wide and will grow to be 10 cells wide. No empty td elements should exist
+    in this table. It should only have cells that are filled. You will draw a right angle triangle with
+    the smallest corner in the top left. Each cell that makes up the triangle should use have the * character.<br />
+    See the output image for an example.<br />
+    Insert your table into the element with #triangle selector.
+</p>
+
+<h3>Output:</h3>
+<p>The what should be showing on the page: (One with the debugg css on so you can see the cells better)</p>
+<img src="https://github.com/crolek/WDV-221/raw/gh-pages/assignments/imgs/Assignment-shapes-rendered.png">
+<p>The console.log output:</p>
+<img src="https://github.com/crolek/WDV-221/raw/gh-pages/assignments/imgs/Assignment-shapes-console.png">
+
+<div id="homework">
+    <h2>Square</h2>
+    <div id="square">
+
+    </div>
+    <h2>Triangle</h2>
+    <div id="triangle">
+
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+var table = '';
+var rows = 10;
+var cols = 10;
+
+for (var r = 0; r < rows; r++){
+ table += '<tr>';
+ for (var c = 0; c < cols; c++ ){
+
+ table += '<td>' + "*" + '</td>';  
+ }
+ table += '<tr>';
+ 
+ }
+  document.write ('<table border = 0>' + table +'</table>');
+
+document.write("<br/>");
+
+ var table = '';
+var rows = 10;
+var cols = 1;
+
+for (var r = 0; r < rows; r++){
+ table += '<tr>';
+ for (var c = 0; c < cols; c++ ){
+
+ table += '<td>' + "*" + '</td>';  
+ }
+ cols++;
+ table += '<tr>';
+ 
+ }
+  document.write ('<table border = 0>' + table +'</table>');
+ 
+    /* this will help me see that your tables are made correctly */
+    function logTableOutput() {
+        console.log(document.querySelector('#square').innerHTML)
+        console.log(document.querySelector('#triangle').innerHTML)
+    }
+    logTableOutput();
+
+
+</script>
+</html>
