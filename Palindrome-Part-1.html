@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+
+
+</style>
+<body>
+<h1>Assignment - Palindrome Part 1</h1>
+<p>
+    Determine if a word is a palindrome. Below are strings to test against.
+    Take the strings below and test to see if they are a palindrome.
+    A palindrome is a word that is spelled the same way forwards and backwards.
+</p>
+<p>
+    Hints, you will most likely use a loop and some concatenation.
+</p>
+<p>
+    You <strong> are not allowed to use the reverse() (aka, the reverse function) anywhere in this assignment.</strong> You will need to get the right answer on your own.
+</p>
+<p>Example input</p>
+<ul>
+    <li>sherpa</li>
+    <li>stewie</li>
+    <li>anna</li>
+    <li>lil aquiggle</li>
+    <li>racecar</li>
+    <li>tacocat</li>
+</ul>
+
+<p>Output:</p>
+<img src="https://crolek.github.io/WDV-221/assignments/imgs/Assignment-palindrome-part-1-output.png" />
+
+</body>
+
+
+<script type="text/javascript">
+   
+   
+   function isWordAPalindrome(word) {
+   console.log('');
+   console.log('The word provided is: ', word);
+        if(word[0] == word.slice(-1)){
+		console.log(word,' is Palindrome.');
+		}else{
+		console.log(word,' is not Palindrome.');
+		}
+    }
+
+    isWordAPalindrome('sherpa'); 		    //should console.log() 'sherpa is not a palindrome'
+    isWordAPalindrome('stewie'); 		    //should console.log() 'stewie is not a palindrome'
+    isWordAPalindrome('anna'); 		        //should console.log() 'anna is a palindrome'
+    isWordAPalindrome('lil squiggle'); 		//should console.log() 'lil squiggle is not a palindrome'
+    isWordAPalindrome('racecar'); 		    //should console.log() 'racecar is a palindrome'
+    isWordAPalindrome('tacocat'); 		    //should console.log() 'tacocat is a palindrome'
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+

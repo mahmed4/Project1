@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+
+   
+</style>
+<body>
+	<h1>Assignment - Letter Grade Calculator</h1>
+	<p>
+	The goal of this excercise is to write a function to take a number and turn it into a letter grade. This will be a good practice of
+		using >, <, >=, and <=. Below is the the example function called getLetterGradeFromNumber(). Use that function to convert the numbers to letter grades.
+		Below the function are a few text inputs to make sure you handle each grade case. The example inputs and expected outputs are provided.
+	</p>
+
+	<p>
+		This is the example grading scale to implement. For instance, a score of 87 would yield a B+. A score of 79.9 would yield a C.
+	</p>
+	<p>
+		If a score above 100 or below 0 is provided output: 'Please provide a valid score'
+	</p>
+	<p>Grading criteria</p>
+	<ul>
+		<li>A 93.0% and above</li>
+		<li>A‐ 90.0% ‐ 92.9%</li>
+		<li>B+ 87.0% ‐ 89.9%</li>
+		<li>B 83.0% ‐ 86.9%</li>
+		<li>B‐ 80.0% ‐ 82.9%</li>
+		<li>C 70% ‐ 79.9%</li>
+		<li>D 60.0% ‐ 69.9%</li>
+		<li>F Below 60%</li>
+	</ul>
+
+	<p>Output:</p>
+	<img src="https://crolek.github.io/WDV-221/assignments/imgs/Assignment-letter-grade-calculator-output.png" />
+	</p>
+</body>
+
+
+<script type="text/javascript">
+
+var score;
+var letterGrade = " ";
+function gradePricessing(score) {
+       
+    if (score > 100)
+        console.log('Please provide a valid score')
+	else if(score <= 59 && score >= 1)
+        console.log('F')
+    else if (score>= 60 && score <65 )
+        console.log('D')
+    else if (score >= 65 && score < 70)
+        console.log('C-')
+    else if (score >= 70 && score < 75)
+        console.log('C')
+    else if (score >= 75 && score < 80)
+        console.log('B-')
+    else if (score >= 80 && score < 85)
+        console.log('B')
+    else if (score >= 85 && score < 90)
+        console.log('B+')
+    else if (score >= 90 && score < 93)
+        console.log('A-')
+    else if (score >= 93 && score <= 100)
+        console.log('A')
+    else if (score <= 0)
+        console.log('Please provide a valid score')
+}
+
+function getLetterGradeFromNumber(score) {
+    
+	console.log('The score provided was: ', score, ' and that is a:');
+
+     gradePricessing(score);
+}
+  
+getLetterGradeFromNumber(100); 		//should console.log() an A
+getLetterGradeFromNumber(83); 		//should console.log() a B
+getLetterGradeFromNumber(74); 		//should console.log() a C
+getLetterGradeFromNumber(61); 		//should console.log() a D
+getLetterGradeFromNumber(58); 		//should console.log() a F
+getLetterGradeFromNumber(90); 		//should console.log() an A-
+getLetterGradeFromNumber(92.9); 	//should console.log() an A-
+getLetterGradeFromNumber(89.9);		//should console.log() a B+
+getLetterGradeFromNumber(101); 		//should console.log() an 'Please provide a valid score'
+getLetterGradeFromNumber(-1);  		//should console.log() an 'Please provide a valid score'
+
+
+</script>
+</html>
+
+
+
+
+
